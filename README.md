@@ -25,3 +25,7 @@ Nano_Free Crash的成因：
 2.修改Nano zone的函数指针，重定向到guard zone.
 	a.对于没有传入指针的函数，直接重定向到guard zone。
 	b.对于有传入指针的函数，先用size判断所属的zone，再进行分发。
+
+
+使用方法：
+将NanoFreeFix.m文件直接导入自己的工程即可。
