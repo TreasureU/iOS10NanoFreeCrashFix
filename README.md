@@ -26,10 +26,10 @@ Nano_Free Crash的成因：
 
 修复方案：
 ========
-1.创建一个自己的zone命名为 guard zone。<br>
-2.修改Nano zone的函数指针，重定向到guard zone:<br>
-     a.对于没有传入指针的函数，直接重定向到guard zone。<br>
-     b.对于有传入指针的函数，先用size判断所属的zone，再进行分发。<br>
+* 创建一个自己的zone命名为 guard zone。<br>
+* 修改Nano zone的函数指针，重定向到guard zone:<br>
+     * 对于没有传入指针的函数，直接重定向到guard zone。<br>
+     * 对于有传入指针的函数，先用size判断所属的zone，再进行分发。<br>
 
 
 使用方法：
